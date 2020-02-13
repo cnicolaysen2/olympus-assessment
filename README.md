@@ -1,7 +1,7 @@
 # olympus-assessment
 Copy of the Olympus project to assess what we can take from it or not.
 
-Usefull tool for switching Node versions along vith matching npm version:
+Usefull tool for switching Node versions along with matching npm version:
 
 https://github.com/coreybutler/nvm-windows
 
