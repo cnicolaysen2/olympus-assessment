@@ -10,7 +10,6 @@ import Selection from 'node_modules/@simonwep/selection-js/src/selection';
 import * as _ from 'node_modules/@simonwep/selection-js/src/utils';
 
 import {GridsterDragndropService} from "../../services/gridster-dragndrop.service";
-import { Router } from '@angular/router';
 
 
 @Component({
@@ -52,13 +51,11 @@ export class GridComponent implements OnInit {
 
   options: GridsterConfig;
   dashboard: GridsterItem[];
-  dashboard2: GridsterItem[];
   private _toolbarStatus = false;
   private _toolbarPosition = {x: 0, y: 0};
   private _zoom;
   selection;
   gridsterState;
-  addComponentSidebar = false;
 
   ngOnInit() {
 
@@ -127,25 +124,14 @@ export class GridComponent implements OnInit {
     };
 
     this.dashboard = [
-      // {cols: 5, rows: 6, y: 0, x: 0, dragEnabled: false, resizeEnabled: false, component: 'UnityViewComponent'},
-      // {cols: 10, rows: 6, y: 6, x: 10, type: 'component', name: 'map'},
-      // {cols: 6, rows: 6, y: 8, x: 10, type: 'component', name: '3d'},
-      // {cols: 9, rows: 6, y: 12, x: 16, type: 'component'},
-      {cols: 8, rows: 4, y: 10, x: 10, type: 'component'}, // 0
-      // {cols: 10, rows: 6, y: 8, x: 10, type: 'component'}, // 1
-      {cols: 6, rows: 6, y: 4, x: 16, type: 'component'},  // 2
-      {cols: 8, rows: 4, y: 10, x: 22, type: 'component'}, // 3
-      // {cols: 11, rows: 7, y: 0, x: 0, type: 'component'},  // 4
-      // {cols: 6, rows: 6, y: 4, x: 0, type: 'component'},
-  ];
-
-    this.dashboard2 = [
-      { cols: 10, rows: 6, y: 0, x: 0, type: 'component' },  // 0
-      { cols: 10, rows: 6, y: 0, x: 0, dragEnabled: false, type: 'component' }, // 1
-      { cols: 10, rows: 6, y: 0, x: 0, dragEnabled: false, type: 'component' },  // 2
-      { cols: 10, rows: 6, y: 0, x: 0, dragEnabled: false, type: 'component' },  // 3
-      { cols: 10, rows: 6, y: 0, x: 0, type: 'component' },  // 4
-      { cols: 10, rows: 6, y: 0, x: 0, dragEnabled: false, type: 'component' },  // 5
+        // {cols: 5, rows: 6, y: 0, x: 0, dragEnabled: false, resizeEnabled: false, component: 'UnityViewComponent'},
+        {cols: 10, rows: 6, y: 0, x: 0, type: 'component', name: 'map'},
+        {cols: 6, rows: 6, y: 0, x: 10, type: 'component', name: '3d'},
+        {cols: 9, rows: 6, y: 0, x: 16, type: 'component'},
+        {cols: 15, rows: 4, y: 6, x: 10, type: 'component'},
+        {cols: 6, rows: 6, y: 10, x: 10, type: 'component'},
+        {cols: 6, rows: 6, y: 10, x: 16, type: 'component'},
+        {cols: 6, rows: 6, y: 10, x: 22, type: 'component'},
     ];
 
     this.initSelection();
@@ -344,8 +330,7 @@ export class GridComponent implements OnInit {
     console.log(this.gridsterDragndropService.dataTransfer);
   }
 
-  toggleZoom() {
-    this.addComponentSidebar = !this.addComponentSidebar;
+  toggleZoom(){
     console.log('zoom');
   }
 
@@ -402,7 +387,6 @@ export class GridComponent implements OnInit {
   constructor(
       private componentFactoryResolver: ComponentFactoryResolver,
       private cdr: ChangeDetectorRef,
-      public router: Router,
       private gridsterDragndropService: GridsterDragndropService){
 
   }

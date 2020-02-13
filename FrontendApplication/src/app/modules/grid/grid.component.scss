@@ -94,22 +94,25 @@ gridster .gridster-row {
 }
 
 
-.mobile-save app-volcano-range {
+.mobile-save img {
   position: fixed;
   top: 32px;
-  height: 150px;
+  height: calc(100vh - 49px);
   opacity: 0.9;
   z-index: 1000;
 
-  width: 100%;
+  width: 142px;
+  right: -130px;
 
   -webkit-transition: linear 0.2s;
   -moz-transition: linear 0.2s ;
   -ms-transition: linear 0.2s ;
   -o-transition: linear 0.2s ;
   transition: linear 0.2s ;
-
-  right: 0;
+  
+  &:hover{
+    right: 0;
+  }
 }
 
 .ribbon-toggle-size{

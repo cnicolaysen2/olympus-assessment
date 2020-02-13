@@ -6,40 +6,31 @@
               (currentZoom)="zoom = $event"
               [options]="options">
 
-        <gridster-item *ngIf="router.url === '/grid'" [attr.data-index]="0" [item]="dashboard2[0]">
-            <app-stream-out></app-stream-out>
-        </gridster-item>
-        <gridster-item *ngIf="router.url === '/grid'" [attr.data-index]="1" [item]="dashboard2[1]">
-            <lib-control-plot width="100%"></lib-control-plot>
-        </gridster-item>
-        <gridster-item *ngIf="router.url === '/grid'" [attr.data-index]="2" [item]="dashboard2[2]">
-            <app-volcano1 width="100%"></app-volcano1>
-        </gridster-item>
+        <gridster-item  [attr.data-index]="i" [item]="item" *ngFor="let item of dashboard; let i = index"
+        >
 
-        <gridster-item *ngIf="router.url === '/grid2'" [attr.data-index]="5" [item]="dashboard2[5]">
-            <app-volcano2 width="100%"></app-volcano2>
-        </gridster-item>
-        <gridster-item *ngIf="router.url === '/grid2'" [attr.data-index]="3" [item]="dashboard2[3]">
-            <lib-stream-in-lib width="100%"></lib-stream-in-lib>
-        </gridster-item>
-        <gridster-item *ngIf="router.url === '/grid2'" [attr.data-index]="1" [item]="dashboard2[1]">
-            <lib-control-plot width="100%"></lib-control-plot>
-        </gridster-item>
+            <div *ngIf="item.component === 'UnityViewComponent'">
+                <!--<app-unity-view></app-unity-view>-->
+            </div>
 
-        <gridster-item  [attr.data-index]="i" [item]="item" *ngFor="let item of dashboard; let i = index">
             <img *ngIf="item.type === 'component' && item.name !== 'map' && item.name !== '3d' && item.name !== 'unity'" width="100%" [src]="'../../../assets/IMAGES/IMAGERY_' + ( i % 6 + 1 ) + '.png'" alt="">
+            <img *ngIf="item.type === 'component' && item.name === 'map'" width="100%" [src]="'../../../assets/Components/2D%20Map.svg'" alt="">
             <img *ngIf="item.type === 'component' && item.name === '3d'" width="100%" [src]="'../../../assets/Components/3D.svg'" alt="">
+            <div *ngIf="item.type === 'component' && item.name === 'unity'" width="100%" alt="">
+                <app-unity-view></app-unity-view>
+            </div>
             <img *ngIf="item.type === 'layer'" width="100%" [src]="
                 ( i % 2 )
                 ? '../../../assets/Components/Layout.svg'
                 : '../../../assets/Components/Layout-filtered.svg'
             " alt="">
+
         </gridster-item>
 
     </gridster>
 </div>
 
-<!-- <div #tools class="tools"
+<div #tools class="tools"
      (contextmenu)="toolbar($event)"
      [hidden]="!toolbarStatus"
      [ngStyle]="{'left': toolbarPosition.x + 'px', 'top': toolbarPosition.y + 'px'}">
@@ -53,10 +44,10 @@
     <div class="oval oval-1"></div>
     <div class="oval oval-2"></div>
     <div class="oval oval-3"></div>
-</div> -->
+</div>
 
-<div [hidden]="!addComponentSidebar" class="mobile-save">
-    <app-volcano-range></app-volcano-range>
+<div class="mobile-save">
+    <img src="../../../assets/imgpsh_mobile_save.jpg" alt="">
 </div>
 
 <div class="ribbon-toggle-size" (click)="toggleZoom()">

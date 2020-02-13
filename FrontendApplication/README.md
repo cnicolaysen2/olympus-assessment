@@ -31,19 +31,3 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ```
     gcloud app deploy --version=prod
 ```
-
-
-
-## FrontendApplication updates
-## If you update and publish "stream-workspace" project, make sure you change package.json
-## "stream-in-lib": "~0.0.XX" to the new version and do npm install before building or deploying
-
-```
-cd FrontendApplication
-npm i
-npm run build
-npm start
-
-npm run deploy
-```
-
