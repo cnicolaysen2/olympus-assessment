@@ -1,0 +1,154 @@
+.header {
+  height: 35px;
+  padding: 0 20px;
+  background-color: #282828;
+  border-bottom: 1px solid #131415;
+  color: white;
+
+/*  .gridview,
+  .checklist {
+    padding-right: 20px !important;
+    padding-left: 20px;
+  }*/
+
+  &-right-side {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    .ant-menu-item {
+      float: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    li {
+      float: right !important;
+    }
+
+    div.toggle {
+      float: right !important;
+      width: 300px;
+      margin: 6px 0;
+    }
+  }
+
+  .gridview {
+    padding: 0 20px;
+  }
+
+  .checklist {
+    padding-left: 20px;
+    padding-right: 36px;
+  }
+
+  .timeline {
+    padding: 0 20px !important;
+  }
+
+  ul {
+    background: #282828;
+    border-bottom: 1px solid #131415;
+  }
+
+  li {
+    width: unset;
+    padding: 0;
+    float: left;
+    text-align: center;
+    margin: 4px 0;
+
+    nz-switch {
+      padding: 0 8px;
+    }
+  }
+
+  li .user {
+    width: 18px;
+  }
+
+  img {
+    width: 18px;
+    height: 18px;
+  }
+
+  nz-input-group {
+    margin: 4px 0;
+    height: 40px;
+    font-size: 18px;
+
+    input {
+      background: #131415;
+      border-color: #131415;
+      padding-left: 36px;
+      font-size: 16px;
+      color: white;
+    }
+
+  }
+
+  ul div:nth-child(3) li{
+    float: right;
+  }
+}
+
+.ant-input-affix-wrapper .ant-input-suffix{
+  color: white !important;
+}
+
+.ant-menu-vertical .ant-menu-item {
+  height: 26px;
+  line-height: 26px;
+}
+
+.layout{
+  height: 100vh;
+  width: 100%;
+}
+
+.nz-sider {
+  position: relative;
+  z-index: 10000;
+}
+
+.logo {
+  width: 120px;
+  height: 31px;
+  background: rgba(255, 255, 255, 0.2);
+  margin: 16px 28px 16px 0;
+  float: left;
+}
+
+.sidebar{
+  position: fixed;
+  left: 0px;
+  top: 34px;
+  width: 140px;
+  height: 100%;
+  z-index: 1000;
+  background-color: #282828;
+  border-right: 1px solid #131415;
+  border-top: 1px solid #131415;
+
+}
+
+.draggable-component {
+  margin: 8px;
+  height: 124px;
+  width: 124px;
+  border-radius: 4px;
+  background-color: #393939;
+}
+
+img g {
+  fill: #000000;
+}
+
+.user {
+  width: unset !important;
+  padding: 0 4px !important;
+}
+
+.profil {
+  width: unset !important;
+  padding-left: 40px !important;
+}

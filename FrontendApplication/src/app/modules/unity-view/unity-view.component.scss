@@ -1,0 +1,26 @@
+::ng-deep #chart path {
+  stroke: steelblue;
+  stroke-width: 2;
+  fill: none;
+}
+
+#chart .axis path, .axis line {
+  fill: none;
+  stroke: grey;
+  stroke-width: 1;
+  shape-rendering: crispEdges;
+}
+
+::ng-deep #chart .axis {
+  color: #e1e1e1;
+}
+
+.charts {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
+
+:host{
+  background-color: #272c39;
+}

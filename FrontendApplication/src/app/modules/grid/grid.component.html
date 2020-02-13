@@ -1,0 +1,66 @@
+<div class="gridster-container-wrap">
+    <gridster #gridsterContainer
+              [selection]="selection"
+              appZoomElement
+              (contextmenu)="cancelSelection($event)"
+              (currentZoom)="zoom = $event"
+              [options]="options">
+
+        <gridster-item *ngIf="router.url === '/grid'" [attr.data-index]="0" [item]="dashboard2[0]">
+            <app-stream-out></app-stream-out>
+        </gridster-item>
+        <gridster-item *ngIf="router.url === '/grid'" [attr.data-index]="1" [item]="dashboard2[1]">
+            <lib-control-plot width="100%"></lib-control-plot>
+        </gridster-item>
+        <gridster-item *ngIf="router.url === '/grid'" [attr.data-index]="2" [item]="dashboard2[2]">
+            <app-volcano1 width="100%"></app-volcano1>
+        </gridster-item>
+
+        <gridster-item *ngIf="router.url === '/grid2'" [attr.data-index]="5" [item]="dashboard2[5]">
+            <app-volcano2 width="100%"></app-volcano2>
+        </gridster-item>
+        <gridster-item *ngIf="router.url === '/grid2'" [attr.data-index]="3" [item]="dashboard2[3]">
+            <lib-stream-in-lib width="100%"></lib-stream-in-lib>
+        </gridster-item>
+        <gridster-item *ngIf="router.url === '/grid2'" [attr.data-index]="1" [item]="dashboard2[1]">
+            <lib-control-plot width="100%"></lib-control-plot>
+        </gridster-item>
+
+        <gridster-item  [attr.data-index]="i" [item]="item" *ngFor="let item of dashboard; let i = index">
+            <img *ngIf="item.type === 'component' && item.name !== 'map' && item.name !== '3d' && item.name !== 'unity'" width="100%" [src]="'../../../assets/IMAGES/IMAGERY_' + ( i % 6 + 1 ) + '.png'" alt="">
+            <img *ngIf="item.type === 'component' && item.name === '3d'" width="100%" [src]="'../../../assets/Components/3D.svg'" alt="">
+            <img *ngIf="item.type === 'layer'" width="100%" [src]="
+                ( i % 2 )
+                ? '../../../assets/Components/Layout.svg'
+                : '../../../assets/Components/Layout-filtered.svg'
+            " alt="">
+        </gridster-item>
+
+    </gridster>
+</div>
+
+<!-- <div #tools class="tools"
+     (contextmenu)="toolbar($event)"
+     [hidden]="!toolbarStatus"
+     [ngStyle]="{'left': toolbarPosition.x + 'px', 'top': toolbarPosition.y + 'px'}">
+    <img height="20" width="20" src="../../../assets/SVG/4_Share.svg" alt="">
+    <img height="20" width="20" src="../../../assets/SVG/toolbar/scissors.svg" alt="">
+    <img height="20" width="20" src="../../../assets/SVG/toolbar/duplicate.svg" alt="">
+    <img height="20" width="20" (click)="deleteActive()" src="../../../assets/SVG/toolbar/rubbish-bin.svg" alt="">
+    <img height="20" width="20" src="../../../assets/SVG/toolbar/Shape%202.svg" alt="">
+    <img height="20" width="20" src="../../../assets/SVG/toolbar/view%202.svg" alt="">
+
+    <div class="oval oval-1"></div>
+    <div class="oval oval-2"></div>
+    <div class="oval oval-3"></div>
+</div> -->
+
+<div [hidden]="!addComponentSidebar" class="mobile-save">
+    <app-volcano-range></app-volcano-range>
+</div>
+
+<div class="ribbon-toggle-size" (click)="toggleZoom()">
+
+</div>
+
+<router-outlet></router-outlet>

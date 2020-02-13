@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>Group 3</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="nav-bar" transform="translate(-1824.000000, -8.000000)">
+            <g id="Group-2" transform="translate(1746.000000, 8.000000)">
+                <g id="Group-3" transform="translate(78.000000, 0.000000)">
+                    <circle id="Oval" fill="#39A0ED" cx="9" cy="9" r="9"></circle>
+                    <text id="+4" font-family="FiraSans-Regular, Fira Sans" font-size="9" font-weight="normal" letter-spacing="-0.086428538" fill="#FFFFFF">
+                        <tspan x="4.49192854" y="12">+4</tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

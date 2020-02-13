@@ -1,0 +1,64 @@
+# compiled output
+/dist
+/tmp
+/out-tsc
+# Only exists if Bazel was run
+/bazel-out
+
+# dependencies
+/frontend_application/node_modules
+/node_modules
+
+# profiling files
+chrome-profiler-events.json
+speed-measure-plugin.json
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/*
+
+# misc
+/.sass-cache
+/connect.lock
+/coverage
+/libpeerconnection.log
+npm-debug.log
+yarn-error.log
+testem.log
+/typings
+
+# System Files
+.DS_Store
+Thumbs.db
+/Unity/Builds
+/Unity/SLB-oct/Library
+/Unity/SLB-oct/Temp
+/Unity/SLB-oct/.vs
+/Unity/SLB-oct/obj
+
+Unity/SLB-oct/Assembly-CSharp-Editor\.csproj
+
+Unity/SLB-oct/Assembly-CSharp\.csproj
+
+Unity/SLB-oct/SLB-oct\.sln
+
+DataProcessingService/assets/*
+/Unity/Layers/obj
+/Unity/Layers/Logs
+/Layers/Library
+/Layers/Assembly-CSharp.csproj
+/Layers/Layers.sln
+/LayersBuild

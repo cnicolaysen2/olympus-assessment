@@ -1,0 +1,57 @@
+
+<div class="webgl-content">
+  <div id="gameContainer" #gameContainer style="width: 100%; height: calc(100vh - 48px)"></div>
+</div>
+
+<div class="charts" *ngIf="lineChartEventJson.length > 0 && unityLoaded">
+  <div *ngFor="let chart of lineChartEventJson">
+    <app-line-chart [chartlabel]="chart.LayerID"
+                    [chartLabelColor]="'#fff'"
+                    (state)="selectedArea($event, chart.LayerID)"
+                    [dataset]="chart.DataDistribution"></app-line-chart>
+  </div>
+</div>
+
+<nz-drawer
+        [nzClosable]="false"
+        [nzVisible]="navigationService.toggleUnityDrawler"
+        [nzWidth]="600"
+        nzPlacement="right"
+        nzTitle="Basic Drawer"
+        (nzOnClose)="navigationService.toggleUnityDrawler = !navigationService.toggleUnityDrawler"
+>
+  <div class="logger">
+
+    <nz-collapse>
+      <nz-collapse-panel
+              [nzHeader]="'logger'"
+      >
+        <nz-alert *ngFor="let notification of notificationHistories" [nzType]="notification.type" [nzMessage]="notification.description"></nz-alert>
+      </nz-collapse-panel>
+      <nz-collapse-panel
+              [nzHeader]="'sendMessage(objectName, methodName, value)'"
+      >
+        <nz-input-group nzCompact [nzAddOnAfter]="suffixSendButton">
+          <input type="text" style="width: 33%" [(ngModel)]="sendMessageModel.objectName" nz-input placeholder="objectName" />
+          <input type="text" style="width: 33%" [(ngModel)]="sendMessageModel.methodName" nz-input placeholder="methodName" />
+          <input type="text" style="width: 34%" [(ngModel)]="sendMessageModel.value" nz-input placeholder="value" />
+        </nz-input-group>
+        <ng-template #suffixSendButton>
+          <button nz-button nzType="primary" (click)="sendMessage(sendMessageModel)">Call12</button>
+        </ng-template>
+      </nz-collapse-panel>
+
+      <nz-collapse-panel
+              [nzHeader]="'function caller'"
+      >
+        <nz-input-group nzSearch [nzAddOnAfter]="suffixButton">
+          <input type="text" [(ngModel)]="functionModelValue.name" nz-input placeholder="input function name" />
+          <input type="text" [(ngModel)]="functionModelValue.value" nz-input placeholder="input function name" />
+        </nz-input-group>
+        <ng-template #suffixButton>
+          <button nz-button nzType="primary" (click)="callFunctionFromUnity(functionModelValue)">Call</button>
+        </ng-template>
+      </nz-collapse-panel>
+    </nz-collapse>
+  </div>
+</nz-drawer>

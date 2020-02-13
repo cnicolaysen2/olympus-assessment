@@ -1,0 +1,104 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3564158023636296881
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3564158023636296887}
+  - component: {fileID: 3564158023636296886}
+  - component: {fileID: -3290847096228524750}
+  - component: {fileID: 915026235492402229}
+  m_Layer: 0
+  m_Name: 3DPane
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3564158023636296887
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3564158023636296881}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3564158023636296886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3564158023636296881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f53ff2d7fce0064c8cd2795dcfda41b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Type: 0
+  PaneName: 3D_Pane
+  Caption: 3D
+  CornerColor: {r: 1, g: 0.6, b: 0, a: 1}
+  CameraPosition: {x: -2, y: 1.8, z: 1.5}
+  CameraAngles: {x: 35, y: 128, z: 0}
+  ViewportRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0.5
+    height: 1
+  CullingMask: 567
+  Orthographic: 0
+  OrthographicSize: 1.5
+  ControlPanelPrefab: {fileID: 658876902373635611, guid: b9402f80a4b633a46a5957786cae8b4a,
+    type: 3}
+  CaptionPrefab: {fileID: 243175510585687445, guid: 0ec1abb0ae73a47448ea12ba0d6cc925,
+    type: 3}
+  CornerPrefab: {fileID: 4657345155388729035, guid: bd3d7131eef146f40a22662696571a26,
+    type: 3}
+  CameraGameObject: {fileID: 0}
+  PaneCamera: {fileID: 0}
+  CanvasGameObject: {fileID: 0}
+  PaneCanvas: {fileID: 0}
+  CaptionGameObject: {fileID: 0}
+  CornerGameObject: {fileID: 0}
+--- !u!114 &-3290847096228524750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3564158023636296881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b586371b66a95640853797b978e70d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &915026235492402229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3564158023636296881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd9aab0487b870645855407ee7b77a7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HSensitivity: 1
+  VSensitivity: 1
+  CubePrefab: {fileID: 7089094009382692312, guid: 12f2368a5ce82c24a8e9404dd523a129,
+    type: 3}
+  CubeObject: {fileID: 0}
+  CubeLayer: GizmoCube3D

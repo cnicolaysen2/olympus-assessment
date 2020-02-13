@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'ITDLS';
+    src: url('fonts/ITDLS.eot');
+    src: url('fonts/ITDLS.eot') format('embedded-opentype'),
+         url('fonts/ITDLS.woff2') format('woff2'),
+         url('fonts/ITDLS.woff') format('woff'),
+         url('fonts/ITDLS.ttf') format('truetype'),
+         url('fonts/ITDLS.svg#ITDLS') format('svg');
+}
+

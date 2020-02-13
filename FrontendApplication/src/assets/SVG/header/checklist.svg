@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>icon/checklist</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M15.3398438,3.6210938 L11.8261719,7.1347656 L9.8398438,5.1513672 L10.8398438,4.1542969 L11.8261719,5.1386719 L14.3417969,2.6230469 L15.3398438,3.6210938 Z M15.3398438,8.7412109 L11.8261719,12.2568359 L9.8398438,10.2734375 L10.8398438,9.2744141 L11.8261719,10.2597656 L14.3417969,7.7431641 L15.3398438,8.7412109 Z M4.2919922,4.1289062 L7.7919922,4.1289062 L7.7919922,5.6289062 L4.2919922,5.6289062 L4.2919922,4.1289062 Z M15.3398438,13.8623047 L11.8261719,17.3779297 L9.8398438,15.3945312 L10.8398438,14.3955078 L11.8261719,15.3808594 L14.3417969,12.8642578 L15.3398438,13.8623047 Z M4.2919922,9.25 L7.7919922,9.25 L7.7919922,10.75 L4.2919922,10.75 L4.2919922,9.25 Z M4.2919922,14.3710938 L7.7919922,14.3710938 L7.7919922,15.8710938 L4.2919922,15.8710938 L4.2919922,14.3710938 Z M0,0 L0,20 L20,20 L20,0 L0,0 Z M18.3115234,18.5 L1.6875,18.5 L1.6875,1.5 L18.3115234,1.5 L18.3115234,18.5 Z" id="path-1"></path>
+    </defs>
+    <g id="icon/checklist" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="colour/white">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="Mask" fill="#000000" xlink:href="#path-1"></use>
+            <g mask="url(#mask-2)" fill="#FFFFFF" id="Rectangle-Copy">
+                <rect x="0" y="0" width="20" height="20"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

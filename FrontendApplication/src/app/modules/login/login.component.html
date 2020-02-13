@@ -1,0 +1,8 @@
+<div nzType="flex" nz-row class="login-container" [nzAlign]="'middle'" [nzJustify]="'center'">
+
+  <div>
+    <button routerLink="/grid" nz-button class="login-form-button" [nzType]="'primary'" (click)="loginClick($event)">Log in</button>
+  </div>
+  <ng-template #prefixUser><i nz-icon type="user"></i></ng-template>
+  <ng-template #prefixLock><i nz-icon type="lock"></i></ng-template>
+</div>

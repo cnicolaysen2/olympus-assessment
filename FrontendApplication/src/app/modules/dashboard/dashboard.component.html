@@ -1,0 +1,13 @@
+<div style="padding:0 24px 24px; width: 100%; overflow: hidden">
+  <app-stacked-bar-chart></app-stacked-bar-chart>
+  <app-line-chart [dataset]="lineData" chartlabel="Porosity" chartlabelcolor="black" (selectedArea)="selectedArea($event)"></app-line-chart>
+  <app-card></app-card>
+  <app-card></app-card>
+  <app-card></app-card>
+  <app-pie-chart [event]="piechartData" chartlabel="Pie Chart Example"></app-pie-chart>
+</div>
+
+<div style="width: 100%; overflow: hidden;">
+  <app-stratigraphy-chart></app-stratigraphy-chart>
+
+</div>

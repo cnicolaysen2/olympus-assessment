@@ -1,0 +1,92 @@
+<nz-layout class="layout">
+  <nz-header class="header">
+    <ul nz-menu [nzTheme]="'dark'">
+      <div nz-col nzSpan="8">
+
+        <!--<li nz-menu-item><i nz-icon nzType="Plus" [nzIconfont]="'ITDLS'"></i></li></li>
+        <li nz-menu-item><svg-icon src="assets/SVG/header/plus.svg">    </svg-icon>-->
+
+        <li nz-menu-item class="header__plus" (click)="addComponentSidebarStatus = !addComponentSidebarStatus"><img src="assets/SVG/header/plus.svg"></li>
+        <li nz-menu-item class="timeline"><img src="assets/SVG/header/timeline.svg"></li>
+        <li nz-menu-item class="header__search"><img src="assets/SVG/header/Delphi_logo.svg">Search</li>
+      </div>
+      <div nz-col nzSpan="16" class="header-right-side">
+
+        <li nz-menu-item style="width: 300px">
+          My view
+          <nz-switch [(ngModel)]="switchValue"></nz-switch>
+           Team view
+        </li>
+        <li nz-menu-item class="gridview"><img src="assets/SVG/header/grid_view.svg"></li>
+        <li nz-menu-item class="checklist"><img src="assets/SVG/header/checklist.svg"></li>
+
+        <li nz-menu-item class="user"><img src="assets/SVG/header/boy.svg"></li>
+        <li nz-menu-item class="user"><img src="assets/SVG/header/man.svg"></li>
+        <li nz-menu-item class="user"><img src="assets/SVG/header/girl.svg"></li>
+        <li nz-menu-item class="user"><img src="assets/SVG/header/team-number.svg"></li>
+
+        <li nz-menu-item class="profil"><img src="assets/SVG/header/profile.svg"></li>
+      </div>
+    </ul>
+  </nz-header>
+  <nz-layout>
+    <!--<nz-sider nzCollapsible [(nzCollapsed)]="isCollapsed"  >-->
+      <!--<ul nz-menu [nzTheme]="'dark'" [nzMode]="'inline'" [nzInlineCollapsed]="isCollapsed">-->
+        <!--<li routerLink="/dashboard" nz-submenu>-->
+          <!--<span title><i nz-icon type="user"></i><span class="nav-text">Dashboard</span></span>-->
+        <!--</li>-->
+        <!--<li nz-submenu>-->
+          <!--<span title><i nz-icon type="laptop"></i><span class="nav-text">Unity</span></span>-->
+          <!--<ul>-->
+            <!--<li routerLink="/unity-view" nz-menu-item>Unity scene 1</li>-->
+            <!--<li routerLink="/unity-view-d3-testarea" nz-menu-item>Unity scene with interface</li>-->
+          <!--</ul>-->
+        <!--</li>-->
+        <!--<li nz-submenu>-->
+          <!--<span title><i nz-icon type="notification"></i><span class="nav-text">Threejs</span></span>-->
+          <!--<ul>-->
+            <!--<li routerLink="/deckgl-testarea/layers" nz-menu-item>deckgl/layers</li>-->
+          <!--</ul>-->
+        <!--</li>-->
+        <!--<li nz-submenu (click)="navigationService.toggleUnityDrawler = !navigationService.toggleUnityDrawler">-->
+          <!--<span title><i nz-icon type="setting"></i><span class="nav-text">logger</span></span>-->
+        <!--</li>-->
+      <!--</ul>-->
+    <!--</nz-sider>-->
+    <nz-layout>
+      <nz-content nz-row>
+        <router-outlet></router-outlet>
+      </nz-content>
+    </nz-layout>
+  </nz-layout>
+</nz-layout>
+
+
+<div class="sidebar" [hidden]="!addComponentSidebarStatus">
+  <nz-tabset [nzTabPosition]="'top'" [nzType]="'card'">
+    <nz-tab class="tab"  [nzTitle]="contentLayer">
+      <div class="draggable-component" draggable="true" (dragstart)="dragStartHandler($event, {type: 'layer', name: 'layout-correlation-calib', cols: 16, rows: 8})">
+        <img width="100%" src="../../../assets/Layout%20Icons/layout-correlation-calib.svg" alt="">
+      </div>
+      <div class="draggable-component" draggable="true" (dragstart)="dragStartHandler($event, {type: 'layer', name: 'layout-sweet-spot', cols: 16, rows: 8})">
+        <img width="100%" src="../../../assets/Layout%20Icons/layout-sweet-spot.svg" alt="">
+      </div>
+      <div class="draggable-component" draggable="true" (dragstart)="dragStartHandler($event, {type: 'layer', name: 'layout-well-correlation', cols: 16, rows: 8})">
+        <img width="100%" src="../../../assets/Layout%20Icons/layout-well-correlation.svg" alt="">
+      </div>
+    </nz-tab>
+
+    <ng-template #contentLayer> <img width="20" src="../../../assets/SVG/sidebar/layout.svg">  </ng-template>
+
+    <nz-tab class="tab"   [nzTitle]="contentLayer2">
+      <div class="draggable-component" draggable="true" (dragstart)="dragStartHandler($event, {type: 'component', name: '3d', cols: 4, rows: 3})"><img width="100%" src="../../../assets/Component%20Icons/component-3d.svg" alt=""></div>
+      <div class="draggable-component" draggable="true" (dragstart)="dragStartHandler($event, {type: 'component', name: 'chart', cols: 4, rows: 3})"><img width="100%" src="../../../assets/Component%20Icons/component-chart.svg" alt=""></div>
+      <div class="draggable-component" draggable="true" (dragstart)="dragStartHandler($event, {type: 'component', name: 'correlation', cols: 4, rows: 3})"><img width="100%" src="../../../assets/Component%20Icons/component-correlation.svg" alt=""></div>
+      <div class="draggable-component" draggable="true" (dragstart)="dragStartHandler($event, {type: 'component', name: 'intersection', cols: 4, rows: 3})"><img width="100%" src="../../../assets/Component%20Icons/component-intersection.svg" alt=""></div>
+      <div class="draggable-component" draggable="true" (dragstart)="dragStartHandler($event, {type: 'component', name: 'map', cols: 4, rows: 3})"><img width="100%" src="../../../assets/Component%20Icons/component-map.svg" alt=""></div>
+      <div class="draggable-component" draggable="true" (dragstart)="dragStartHandler($event, {type: 'component', name: 'unity', cols: 16, rows: 8})"><img width="100%" src="../../../assets/Component%20Icons/component-unity.svg" alt=""></div>
+    </nz-tab>
+    <ng-template #contentLayer2> <img width="20" src="../../../assets/SVG/1_ADD-DATA-RANGE.svg">  </ng-template>
+  </nz-tabset>
+</div>
+

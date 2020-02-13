@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6081946335229401768
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6081946335229401769}
+  - component: {fileID: 6081946335229401774}
+  m_Layer: 0
+  m_Name: PaneRoot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6081946335229401769
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6081946335229401768}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6081946335229401774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6081946335229401768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7548ae24bb41ba94da0bf9eeb34ceb95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PanesPrefabs:
+  - {fileID: 3564158023636296881, guid: 784bc2d581a32b8469c848567ba1c364, type: 3}
+  - {fileID: 4324229437779164469, guid: 343e3f7fc9658024cb42c2f7fdd92041, type: 3}
+  - {fileID: 4359800603093101543, guid: a18051c850caf6e4daaad538cb2aa3bb, type: 3}
+  - {fileID: 1823014885841786188, guid: 7cf15c928ed8dfe48b1ead8685a60aeb, type: 3}
+  InstantiatedPanes: []

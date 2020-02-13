@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>icon/grid_view</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M20,11.4003906 L11.4003906,11.4003906 L11.4003906,20 L20,20 L20,11.4003906 Z M18.5,12.9003906 L18.5,18.5 L13,18.5 L13,12.9003906 L18.5,12.9003906 Z M20,0 L11.4003906,0 L11.4003906,8.6000977 L20,8.6000977 L20,0 Z M18.5,1.5 L18.5,7.1000977 L13,7.1000977 L13,1.5 L18.5,1.5 Z M8.5996094,0 L9.41469125e-14,0 L9.41469125e-14,8.6000977 L8.5996094,8.6000977 L8.5996094,0 Z M7.0996094,1.5 L7.0996094,7.1000977 L1.5,7.1000977 L1.5,1.5 L7.0996094,1.5 Z M8.5996094,11.4003906 L9.41469125e-14,11.4003906 L9.41469125e-14,20 L8.5996094,20 L8.5996094,11.4003906 Z M7.0996094,12.9003906 L7.0996094,18.5 L1.5,18.5 L1.5,12.9003906 L7.0996094,12.9003906 Z" id="path-1"></path>
+    </defs>
+    <g id="icon/grid_view" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="colour/white">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="Mask" fill="#000000" fill-rule="nonzero" xlink:href="#path-1"></use>
+            <g mask="url(#mask-2)" fill="#FFFFFF" id="Rectangle-Copy">
+                <rect x="0" y="0" width="20" height="20"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,11 @@
+.pie-chart {
+  background: #242834;
+  width: 200px;
+  color: white;
+
+  &__label {
+    text-align: center;
+    display: block;
+    padding-top: 10px;
+  }
+}
