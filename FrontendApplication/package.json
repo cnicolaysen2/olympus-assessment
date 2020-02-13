@@ -36,6 +36,7 @@
     "deck.gl": "^6.4.9",
     "mapbox-gl": "^0.53.1",
     "ng-zorro-antd": "^7.2.0",
+    "node-sass": "^4.13.1",
     "panzoom": "^8.0.0",
     "rxjs": "~6.3.3",
     "tslib": "^1.9.0",
@@ -44,7 +45,7 @@
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.13.0",
     "@angular/cli": "~7.3.7",
-    "@angular/compiler-cli": "~7.2.0",
+    "@angular/compiler-cli": "^7.2.16",
     "@angular/language-service": "~7.2.0",
     "@danmarshall/deckgl-typings": "git+https://github.com/danmarshall/deckgl-typings.git",
     "@types/d3": "^5.7.1",
