@@ -13,6 +13,29 @@ export class NavigationComponent {
     public navigationService: NavigationService,
     public gridsterDragndropService: GridsterDragndropService){}
 
+  draggableComponents = {
+    tabs: {
+      layers: [
+        {
+          name: 'layout-correlation-calib',
+          cols: 16,
+          rows: 8
+        },
+        {
+          name: 'layout-sweet-spot',
+          cols: 16,
+          rows: 8
+        },
+        {
+          name: 'layout-well-correlation',
+          cols: 16,
+          rows: 8
+        }
+      ],
+      components: []
+    }
+  };
+
   tabs = [1, 2, 3];
   isCollapsed = true;
   addComponentSidebarStatus = false;
@@ -24,7 +47,7 @@ export class NavigationComponent {
     this.gridsterDragndropService.dataTransfer = obj;
   }
 
-  addComponent(){
+  addComponent() {
 
   }
 }

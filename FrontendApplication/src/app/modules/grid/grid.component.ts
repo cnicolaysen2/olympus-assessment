@@ -9,7 +9,7 @@ import {UnityViewComponent} from '../unity-view/unity-view.component';
 import Selection from 'node_modules/@simonwep/selection-js/src/selection';
 import * as _ from 'node_modules/@simonwep/selection-js/src/utils';
 
-import {GridsterDragndropService} from "../../services/gridster-dragndrop.service";
+import {GridsterDragndropService} from '../../services/gridster-dragndrop.service';
 
 
 @Component({
@@ -61,7 +61,7 @@ export class GridComponent implements OnInit {
 
 
 
-    //gridster
+    // gridster
     // All values of options is correct. Please be careful when you changes any options in this file.
     // Because it's can broke some keys.
     this.options = {
@@ -124,14 +124,14 @@ export class GridComponent implements OnInit {
     };
 
     this.dashboard = [
-        // {cols: 5, rows: 6, y: 0, x: 0, dragEnabled: false, resizeEnabled: false, component: 'UnityViewComponent'},
+        /*// {cols: 5, rows: 6, y: 0, x: 0, dragEnabled: false, resizeEnabled: false, component: 'UnityViewComponent'},
         {cols: 10, rows: 6, y: 0, x: 0, type: 'component', name: 'map'},
         {cols: 6, rows: 6, y: 0, x: 10, type: 'component', name: '3d'},
         {cols: 9, rows: 6, y: 0, x: 16, type: 'component'},
         {cols: 15, rows: 4, y: 6, x: 10, type: 'component'},
         {cols: 6, rows: 6, y: 10, x: 10, type: 'component'},
         {cols: 6, rows: 6, y: 10, x: 16, type: 'component'},
-        {cols: 6, rows: 6, y: 10, x: 22, type: 'component'},
+        {cols: 6, rows: 6, y: 10, x: 22, type: 'component'},*/
     ];
 
     this.initSelection();
@@ -139,9 +139,9 @@ export class GridComponent implements OnInit {
 
   }
 
-  initSelection(){
-    //Selective tool
-    let self = this;
+  initSelection() {
+    // Selective tool
+    const self = this;
     this.selection = new Selection({
 
 
@@ -193,15 +193,15 @@ export class GridComponent implements OnInit {
         // console.log(originalEvent, eventName, areaElement);
         // this.clearSelection();
 
-        areaElement.style.width = parseInt(areaElement.style.width)/self.zoom + 'px';
-        areaElement.style.height = parseInt(areaElement.style.height)/self.zoom + 'px';
-        areaElement.style.top = parseInt(areaElement.style.top)/self.zoom + 'px';
-        areaElement.style.bottom = parseInt(areaElement.style.bottom)/self.zoom + 'px';
-        areaElement.style.left = parseInt(areaElement.style.left)/self.zoom + 'px';
-        areaElement.style.right = parseInt(areaElement.style.right)/self.zoom + 'px';
+        areaElement.style.width = parseInt(areaElement.style.width) / self.zoom + 'px';
+        areaElement.style.height = parseInt(areaElement.style.height) / self.zoom + 'px';
+        areaElement.style.top = parseInt(areaElement.style.top) / self.zoom + 'px';
+        areaElement.style.bottom = parseInt(areaElement.style.bottom) / self.zoom + 'px';
+        areaElement.style.left = parseInt(areaElement.style.left) / self.zoom + 'px';
+        areaElement.style.right = parseInt(areaElement.style.right) / self.zoom + 'px';
 
         document.querySelectorAll('div.selection-area').forEach((item) => {
-          (<any>item).style.zoom = self.zoom;
+          (item as any).style.zoom = self.zoom;
         });
 
         // } else {
@@ -228,28 +228,28 @@ export class GridComponent implements OnInit {
         //   this.clearSelection();
         // }
 
-        //{selectedElements, changedElements, originalEvent}
+        // {selectedElements, changedElements, originalEvent}
         // console.log(selectedElements)
         // console.log(areaElement.style.width);
         // console.log(self.zoom);
-        areaElement.style.width = parseInt(areaElement.style.width)/self.zoom + 'px';
-        areaElement.style.height = parseInt(areaElement.style.height)/self.zoom + 'px';
-        areaElement.style.top = parseInt(areaElement.style.top)/self.zoom + 'px';
-        areaElement.style.bottom = parseInt(areaElement.style.bottom)/self.zoom + 'px';
-        areaElement.style.left = parseInt(areaElement.style.left)/self.zoom + 'px';
-        areaElement.style.right = parseInt(areaElement.style.right)/self.zoom + 'px';
+        areaElement.style.width = parseInt(areaElement.style.width) / self.zoom + 'px';
+        areaElement.style.height = parseInt(areaElement.style.height) / self.zoom + 'px';
+        areaElement.style.top = parseInt(areaElement.style.top) / self.zoom + 'px';
+        areaElement.style.bottom = parseInt(areaElement.style.bottom) / self.zoom + 'px';
+        areaElement.style.left = parseInt(areaElement.style.left) / self.zoom + 'px';
+        areaElement.style.right = parseInt(areaElement.style.right) / self.zoom + 'px';
         // Add a custom class to the elements that where selected.
         // console.log(selectionEvent);
 
 
         // console.log(areaElement.getBoundingClientRect());
 
-        let gridsterItems = document.querySelectorAll('gridster-item');
-        let activedItems = [];
+        const gridsterItems = document.querySelectorAll('gridster-item');
+        const activedItems = [];
 
         gridsterItems.forEach((node) => {
-          let demension = node.getBoundingClientRect();
-          let zoomedNode = demension;
+          const demension = node.getBoundingClientRect();
+          const zoomedNode = demension;
 
           if (_.intersects(areaElement.getBoundingClientRect(), zoomedNode)) {
             // console.log(areaElement.getBoundingClientRect(), zoomedNode, node);
@@ -283,7 +283,7 @@ export class GridComponent implements OnInit {
 
         self.cdr.detectChanges();
         this.keepSelection();
-        if (originalEvent){
+        if (originalEvent) {
           originalEvent.preventDefault();
           originalEvent.stopPropagation();
         }
@@ -291,7 +291,7 @@ export class GridComponent implements OnInit {
     });
   }
 
-  toolbar(event){
+  toolbar(event) {
     event.preventDefault();
     event.stopPropagation();
   }
@@ -302,8 +302,8 @@ export class GridComponent implements OnInit {
       }
   }
 
-  cancelSelection(event: Event){
-    //disable context menu
+  cancelSelection(event: Event) {
+    // disable context menu
     event.preventDefault();
     event.stopPropagation();
     const selected = this.gridsterContainer.el.childNodes;
@@ -311,9 +311,9 @@ export class GridComponent implements OnInit {
     if (selected) {
       // Unselect element
       selected.forEach((item) => {
-        if (item.classList && item.classList.contains('selected')){
+        if (item.classList && item.classList.contains('selected')) {
           item.classList.toggle('selected');
-        };
+        }
       });
       this._toolbarStatus = false;
       this.selection.removeFromSelection(event.target);
@@ -330,7 +330,7 @@ export class GridComponent implements OnInit {
     console.log(this.gridsterDragndropService.dataTransfer);
   }
 
-  toggleZoom(){
+  toggleZoom() {
     console.log('zoom');
   }
 
@@ -350,27 +350,27 @@ export class GridComponent implements OnInit {
   }
 
   deleteActive() {
-    let removeItems = {};
+    const removeItems = {};
     for (let i = 0; i < this.gridsterState.length; i++) {
-      let gridster = this.gridsterState[i];
-      if (gridster.localName === 'gridster-item' && gridster.classList.contains('selected')){
+      const gridster = this.gridsterState[i];
+      if (gridster.localName === 'gridster-item' && gridster.classList.contains('selected')) {
         // console.log(gridster.getAttribute("data-index"));
-        removeItems[gridster.getAttribute("data-index")] = this.dashboard[gridster.getAttribute("data-index")];
+        removeItems[gridster.getAttribute('data-index')] = this.dashboard[gridster.getAttribute('data-index')];
 
         // gridster.parentNode.removeChild(gridster);
       }
     }
     console.log(removeItems);
 
-    for (let index in removeItems) {
-      this.removeItem(null, removeItems[index])
+    for (const index in removeItems) {
+      this.removeItem(null, removeItems[index]);
     }
     this.toolbarStatus = false;
     // console.log(this.gridsterState);
   }
 
   removeItem($event, item) {
-    if ($event){
+    if ($event) {
       $event.preventDefault();
       $event.stopPropagation();
     }
@@ -387,7 +387,7 @@ export class GridComponent implements OnInit {
   constructor(
       private componentFactoryResolver: ComponentFactoryResolver,
       private cdr: ChangeDetectorRef,
-      private gridsterDragndropService: GridsterDragndropService){
+      private gridsterDragndropService: GridsterDragndropService) {
 
   }
 }

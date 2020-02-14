@@ -9,12 +9,12 @@ import {registerLocaleData} from '@angular/common';
 import en from '@angular/common/locales/en';
 import {SharedModule} from './shared/shared.module';
 import {GlobalPubSubService} from './shared/global-pub-sub.service';
-import {NavigationService} from "./router-components/navigation/navigation.service";
-import {NavigationComponent} from "./router-components/navigation/navigation.component";
-import {MainThemeComponent} from "./router-components/main-theme/main-theme.component";
-import {NavigationViewComponent} from "./router-components/navigation-view-component/navigation-view.component";
-import {ChartService} from "./services/chart.service";
-import {GridsterDragndropService} from "./services/gridster-dragndrop.service";
+import {NavigationService} from './router-components/navigation/navigation.service';
+import {NavigationComponent} from './router-components/navigation/navigation.component';
+import {MainThemeComponent} from './router-components/main-theme/main-theme.component';
+import {NavigationViewComponent} from './router-components/navigation-view-component/navigation-view.component';
+import {ChartService} from './services/chart.service';
+import {GridsterDragndropService} from './services/gridster-dragndrop.service';
 import { ZoomElementDirective } from './directives/zoom-element.directive';
 
 registerLocaleData(en);

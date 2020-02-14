@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import {NavigationComponent} from './router-components/navigation/navigation.component';
-import {MainThemeComponent} from "./router-components/main-theme/main-theme.component";
-import {NavigationViewComponent} from "./router-components/navigation-view-component/navigation-view.component";
+import {MainThemeComponent} from './router-components/main-theme/main-theme.component';
+import {NavigationViewComponent} from './router-components/navigation-view-component/navigation-view.component';
 
 const routes: Routes = [
   {

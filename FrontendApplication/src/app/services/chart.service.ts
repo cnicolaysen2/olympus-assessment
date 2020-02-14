@@ -13,10 +13,9 @@ export class ChartService {
         return this.eventChartVisibility;
     }
 
-    //chartService.getChartVisibilityEmitter().subscribe((data) => console.log(data));
+    // chartService.getChartVisibilityEmitter().subscribe((data) => console.log(data));
 
     public setChartVisibility(chartId) {
         this.eventChartVisibility.emit(chartId);
     }
-
 }
