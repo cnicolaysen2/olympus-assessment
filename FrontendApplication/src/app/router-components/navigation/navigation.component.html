@@ -88,7 +88,7 @@
                     class="draggable-component"
                     draggable="true"
                     (dragstart)="dragStartHandler($event, {type: 'layer', name: layer.name, cols: layer.cols, rows: layer.rows})">
-                <img width="100%" src="../../../assets/Layout%20Icons/{{layer.name}}.svg" alt="">
+                <img width="100%" src="../../../assets/Layout%20Icons/{{layer.icon}}" alt="">
             </div>
         </nz-tab>
 
@@ -97,29 +97,11 @@
         </ng-template>
 
         <nz-tab class="tab"   [nzTitle]="contentLayer2">
-            <div class="draggable-component"
-                 draggable="true" (dragstart)="dragStartHandler($event, {type: 'component', name: '3d', cols: 4, rows: 3})">
-                <img width="100%" src="../../../assets/Component%20Icons/component-3d.svg" alt="">
-            </div>
-            <div class="draggable-component"
-                 draggable="true" (dragstart)="dragStartHandler($event, {type: 'component', name: 'chart', cols: 4, rows: 3})">
-                <img width="100%" src="../../../assets/Component%20Icons/component-chart.svg" alt="">
-            </div>
-            <div class="draggable-component"
-                 draggable="true" (dragstart)="dragStartHandler($event, {type: 'component', name: 'correlation', cols: 4, rows: 3})">
-                <img width="100%" src="../../../assets/Component%20Icons/component-correlation.svg" alt="">
-            </div>
-            <div class="draggable-component"
-                 draggable="true" (dragstart)="dragStartHandler($event, {type: 'component', name: 'intersection', cols: 4, rows: 3})">
-                <img width="100%" src="../../../assets/Component%20Icons/component-intersection.svg" alt="">
-            </div>
-            <div class="draggable-component"
-                 draggable="true" (dragstart)="dragStartHandler($event, {type: 'component', name: 'map', cols: 4, rows: 3})">
-                <img width="100%" src="../../../assets/Component%20Icons/component-map.svg" alt="">
-            </div>
-            <div class="draggable-component"
-                 draggable="true" (dragstart)="dragStartHandler($event, {type: 'component', name: 'unity', cols: 16, rows: 8})">
-                <img width="100%" src="../../../assets/Component%20Icons/component-unity.svg" alt="">
+            <div *ngFor="let Component of draggableComponents.tabs.components"
+                    class="draggable-component"
+                    draggable="true"
+                    (dragstart)="dragStartHandler($event, {type: 'layer', name: Component.name, cols: Component.cols, rows: Component.rows})">
+                <img width="100%" src="../../../assets/Component%20Icons/{{Component.icon}}" alt="">
             </div>
         </nz-tab>
         <ng-template #contentLayer2>

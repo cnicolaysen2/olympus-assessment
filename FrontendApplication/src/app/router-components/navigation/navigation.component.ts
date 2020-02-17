@@ -18,21 +18,61 @@ export class NavigationComponent {
       layers: [
         {
           name: 'layout-correlation-calib',
+          icon: 'layout-correlation-calib.svg',
           cols: 16,
           rows: 8
         },
         {
           name: 'layout-sweet-spot',
+          icon: 'layout-sweet-spot.svg',
           cols: 16,
           rows: 8
         },
         {
           name: 'layout-well-correlation',
+          icon: 'layout-well-correlation.svg',
           cols: 16,
           rows: 8
         }
       ],
-      components: []
+      components: [
+        {
+          name: '3d',
+          icon: 'component-3d.svg',
+          cols: 4,
+          rows: 3
+        },
+        {
+          name: 'chart',
+          icon: 'component-chart.svg',
+          cols: 4,
+          rows: 3
+        },
+        {
+          name: 'correlation',
+          icon: 'component-correlation.svg',
+          cols: 4,
+          rows: 3
+        },
+        {
+          name: 'intersection',
+          icon: 'component-intersection.svg',
+          cols: 4,
+          rows: 3
+        },
+        {
+          name: 'map',
+          icon: 'component-map.svg',
+          cols: 4,
+          rows: 3
+        },
+        {
+          name: 'unity',
+          icon: 'component-unity.svg',
+          cols: 16,
+          rows: 8
+        }
+      ]
     }
   };
 
